@@ -28,7 +28,7 @@
 - name: Get DEB architecture
   command: dpkg --print-architecture
   register: sansible_java_deb_architecture
-  changed_when: False
+  check_mode: no
 
 - name: Set OpenJDK Java as default
   become: yes
